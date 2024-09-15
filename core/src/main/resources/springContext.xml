@@ -1,0 +1,12 @@
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <alias alias="emailService" name="defaultEmailService"/>
+    <bean id="defaultEmailService" class="com.vanadio.core.services.impl.DefaultEmailService">
+        <constructor-arg name="javaMailSender" ref="javaMailSender"/>
+    </bean>
+
+</beans>
